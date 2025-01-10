@@ -1,38 +1,36 @@
-export let Employeedetails=[
+let Employeedetails=[
     {
-        "empid":101,
-        "empname":"Sankari",
-        "empusername":"San0406",
-        "emppassword":"sara@2904",
-        "empdesignation":"Java Software Developer",
-        "empexp":10,
-        "empsalary":500000
-    },
-
-    {
-        "empid":102,
-        "empname":"Saranya",
-        "empusername":"Sarans02",
-        "emppassword":"Siva@0406",
-        "empdesignation":"Software Engineer",
+        "empid":1,
+        "empname":"Annamalai",
+        "empusername":"Annamalai1122",
+        "emppassword":"sam123",
+        "empdesignation":"JAVA FULL STACK DEVELOPER",
         "empexp":5,
-        "empsalary":1000000
+        "empsalary":765000
     },
-
     {
-        "empid":103,
-        "empname":"Shobana",
-        "empusername":"Shoba",
-        "emppassword":"Shobakarthi@06",
-        "empdesignation":"Web Developer",
-        "empexp":15,
-        "empsalary":2000000
+        "empid":2,
+        "empname":"Rajesh",
+        "empusername":"Rajesh123",
+        "emppassword":"Rajesh123",
+        "empdesignation":"Trainer",
+        "empexp":4,
+        "empsalary":580000
+    },
+    {
+        "empid":3,
+        "empname":"Jayaprakash",
+        "empusername":"Prakash456",
+        "emppassword":"Jaya123",
+        "empdesignation":"JAVA FULL STACK DEVELOPER",
+        "empexp":1,
+        "empsalary":440000
     }
 ]
 
 export const create=(obj)=>
 {
-    Employeedetails.push(obj);
+    Employeedetails.push(obj)
 }
 
 export const list=()=>
@@ -45,37 +43,38 @@ export const read=(index)=>
     return Employeedetails[index];
 }
 
-export const fetchexact=(name)=>
+export  const fetchexact=(name)=>
 {
     const temp=Employeedetails.filter((element)=>
     {
-        return element.empname==name;
+        return element.empname===name;
     })
+
     return temp[0];
 }
 
-export const alternation=(ele,index)=>
+export const alteration=(ele,index)=>
 {
-    Employeedetails[index]=ele;
+ Employeedetails[index]=ele;
 }
 
 export const deleting=(index)=>
 {
-    var sure=prompt("Are you sure you want to delete the values")
-    if(sure=="yes")
+    var yesno=prompt(" are you sure your values is deleted");
+    if(yesno==='yes')
     {
         Employeedetails=Employeedetails.filter((ele,ind)=>
-        {
+        { 
             return ind!==index;
         })
         return Employeedetails;
     }
-    else if(sure=="no")
+    else if(yesno==='no')
     {
-        alert("You value is not deleted")
+        alert('your value is not deleted')
         return Employeedetails;
     }
     else{
-        alert("Thank you")
+        alert("  your values is not deleted")
     }
 }

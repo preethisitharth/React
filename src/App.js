@@ -1,7 +1,10 @@
 
 import { BootstrapExecution } from "./Bootstrap";
+import { RegistrationForm } from "./EmployeeRegistration";
 import List, { Unorderlist } from "./Function";
+import { Mainpage } from "./Homepage";
 import { Parameter } from "./Parameter";
+import { ReadingaEmployeedetails } from "./Read";
 import { Travelsname } from "./Tablecss";
 import { Employeedetails } from "./TemporaryValue";
 import { TernaryOperator } from "./TernaryOperator";
@@ -26,6 +29,9 @@ function App()
 {/* <TernaryOperator/> */}
 {/* <Employeedetails/> */}
 {/* <Homepage/> */}
+{/* <RegistrationForm/> */}
+{/* <ReadingaEmployeedetails/> */}
+<Mainpage/>
 
 
     </>
